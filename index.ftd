@@ -91,6 +91,8 @@ lang: json
 
 -- api-page: Post API
 
+Some body content here...
+
 
 -- api: /store/<api-name>
 type: POST
