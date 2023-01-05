@@ -15,6 +15,23 @@ This creates a Todo object
 
 Markdown is supported in descriptions. Add information here for users to get accustomed to endpoints
 
+
+
+-- detail.detail: Security: API Key
+color: $fpm.color.main.text-strong
+width: fill
+is-open: true
+
+--- cb.code:
+lang: javascript
+
+Just use 123. It's super secure ;)
+
+An API key is a token that you provide when making API calls. Include the token in a query parameter called apikey.
+
+Example: ?apikey=123
+
+
 -- ds.api: /store/<api-name>
 type: POST
 authorization: true
