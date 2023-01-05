@@ -3,6 +3,19 @@
 
 -- ds.api-page: Put API
 
+-- ds.api-card: PUT
+type: PUT 
+url: `https://todos.fastn.io/todos/{id}`
+
+
+-- tf.markdown:
+
+Update a single todo using an ID
+
+Markdown is supported in descriptions. Add information here for users to get accustomed to endpoints
+
+
+
 -- ds.api: /store/<api-name>
 type: PUT
 purpose: Find purchase order by ID

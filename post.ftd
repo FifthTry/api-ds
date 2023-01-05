@@ -3,6 +3,18 @@
 
 -- ds.api-page: Post API
 
+
+-- ds.api-card: POST
+type: POST 
+url: `https://todos.fastn.io/todos`
+
+
+-- tf.markdown:
+
+This creates a Todo object
+
+Markdown is supported in descriptions. Add information here for users to get accustomed to endpoints
+
 -- ds.api: /store/<api-name>
 type: POST
 authorization: true

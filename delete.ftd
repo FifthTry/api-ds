@@ -3,6 +3,20 @@
 
 -- ds.api-page: Delete API
 
+
+
+
+-- ds.api-card: DELETE
+type: DELETE 
+url: `https://todos.fastn.io/todos/{id}`
+
+
+-- tf.markdown:
+
+Delete a todo using an ID
+
+Markdown is supported in descriptions. Add information here for users to get accustomed to endpoints
+
 -- ds.api: /store/<api-name>
 type: DELETE
 purpose: Find purchase order by ID
