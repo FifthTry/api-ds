@@ -5,6 +5,7 @@ download-base-url: https://raw.githubusercontent.com/fifthtry/api-ds/main
 
 -- fpm.dependency: fifthtry.github.io/header
 -- fpm.dependency: fifthtry.github.io/code-block
+-- fpm.dependency: fifthtry.github.io/typography as tf
 
 
 
@@ -12,6 +13,7 @@ download-base-url: https://raw.githubusercontent.com/fifthtry/api-ds/main
 
 -- fpm.auto-import: fpm
 -- fpm.auto-import: fifthtry.github.io/header as h
+-- fpm.auto-import: tf
 -- fpm.auto-import: fifthtry.github.io/code-block as cb
 
 
