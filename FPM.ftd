@@ -19,9 +19,9 @@ download-base-url: https://raw.githubusercontent.com/fifthtry/api-ds/main
 
 -- fpm.sitemap:
 
-# API Docs: /api/post/
+# API Docs: /post/
 
-- POST: /api/post/
-- PUT: /api/put/
-- GET: /api/get/
-- DELETE: /api/delete/
+- POST: /post/
+- PUT: /put/
+- GET: /get/
+- DELETE: /delete/
