@@ -1,57 +1,731 @@
 -- import: fifthtry.github.io/api-ds/assets
 
 
+-- record toc-item:
+caption title:
+optional string method:
+optional string url:
 
--- ds.page: Welcome to your [FPM site](https://fpm.dev/)
+-- optional string site-name: API DS
 
-FPM Blank Package Template Repo
+-- boolean login-button: false
 
-🧑‍🚀 **Seasoned traveler?** update this file. Enjoy!
+-- string login-url: /
+
+-- boolean pricing-cta: false
+
+-- optional ftd.image-src site-logo:
+-- string site-url: index.html
+
+-- toc-item list toc-item-list:
+
+-- toc-item-list: ENDPOINTS 
+
+-- fpm.toc-item list sections:
+-- fpm.toc-item list sub-sections:
+-- fpm.toc-item list extra:
+-- fpm.toc-item list toc:
+
+-- toc-item-list: Post Api
+method: POST
+url: post/
+
+-- toc-item-list: Get Api
+method: GET
+url: get/
 
 
---- ds.image: doc-site
-src: $assets.files.doc-site-example.png
+
+-- toc-item-list: Put Api
+method: PUT
+url: put/
+
+-- toc-item-list: Delete Api
+method: DELETE
+url: delete/
+
+
+
+-- record parameter:
+caption title:
+string description:
+optional boolean required:
+string datatype:
+string statement:
+
+-- parameter list parameters-list:
+
+-- parameters-list: orderid
+description:ID of order that needs to be fetched
+required: true
+datatype: integer
+statement: path
+
+-- parameters-list: orderid
+description:ID of order that needs to be fetched
+required: true
+datatype: integer
+statement: path
+
+
+
+
+-- record response:
+caption title:
+string description:
+string link:
+string lang:
+body body:
+
+-- response list responses-list:
+
+-- responses-list: 200
+description: lorem
+link: no link
+lang: json
+
+"id": 10,
+"username": "theUser",
+  
+
+
+-- api-page: Post API
+
+
+-- api: /store/<api-name>
+type: POST
+authorization: true
+purpose: Find purchase order by ID
+bgcolor: $fpm.color.main.success.base
+typecolor: $fpm.color.main.success.text
+textColor: $fpm.color.main.success.text
+
+For valid response try integer IDs with value <= 5 or > 10. Other values will generate exceptions.
+
+-- parameter-card:
+cta-title: Try it out
+cta-url: post/
+parameters-list: $parameters-list
+
+-- response-card:
+responses-list: $responses-list
+
+
+
+
+
+
+
+
+
+-- ftd.column api:
+caption title:
+string type:
+string purpose:
+body body:
+boolean authorization: false
+boolean show-box: true
+boolean show-data: false
+ftd.color bgcolor: $fpm.color.main.background.step-1
+ftd.color typecolor: $fpm.color.main.background.step-1
+ftd.color textColor: $fpm.color.main.background.step-1
+color: $fpm.color.main.background.step-1
+border-color: $typecolor
+border-width: 1
+max-width: 690
+background-color: $bgcolor
+width: fill
+open: true
+append-at: test-container
+border-radius: 6
+
+--- ftd.row:
+width: fill
+padding: 5
+;$on-click$: toggle $show-box
+$on-mouse-enter$: $show-data = true
+$on-mouse-leave$: $show-data = false
+id: api-main-container
+
+--- ftd.row:
+width: fill
+spacing: 12
+
+--- ftd.text: $type
+padding-vertical: 4
+padding-horizontal: 8
+text-align: center
+background-color: $typecolor
+color: $fpm.color.main.text-strong
+role: $fpm.type.copy-relaxed
+style: medium
+border-radius: 8
+
+--- ftd.text: $title
+role: $fpm.type.copy-tight
+style: semi-bold
+align: center
+
+--- ftd.text: $purpose
+role: $fpm.type.copy-tight
+align: center
+
+--- container: api-main-container
+
+--- ftd.row:
+align: center
+spacing: 4
+
+/--- ftd.image:
+if: not $show-box
+src: $assets.files.static.down.svg
+width: 24
+
+
+
+/--- ftd.image:
+if: $show-box
+src: $assets.files.static.up.svg
+width: 24
+
+
+
+--- ftd.image:
+if: $authorization
+src: $assets.files.static.lock.svg
+width: 24
+
+
+--- ftd.row:
+if: $show-data
+
+--- ftd.image:
+src: $assets.files.static.clipboard.png
+width: 24
+height: 24
+
+--- ftd.image:
+src: $assets.files.static.down-left.png
+width: 24
+height: 24
+
+--- container: ftd.main
+
+--- ftd.column:
+if: $show-box
+border-color: $typecolor
+border-top: 1
+
+--- ftd.text: $body
+role: $fpm.type.copy-relaxed
+padding-vertical: 24
+padding-horizontal: 20
+
+--- ftd.column:
+id: test-container
 width: fill
 
 
---- ds.h1: 🚀 Project Structure
-
-Inside of your FPM project, you'll see the following folders and files:
-
-
---- ds.code:
-lang:
-
-/
-├── .build/
-│   └── index.html
-├── .packages/
-│   └── fifthtry.github.io/
-│   	└── All downloaded dependencies
-│   	
-├── FPM.ftd
-├── index.ftd
-└── README.md
 
 
 
---- ds.h1: 🧞 Commands
-
-All commands are run from the root of the project, from a terminal:
-
---- ds.code:
-lang:
-
-=======================================================================
-| Command                | Action                                     |
-| :--------------------- | :----------------------------------------- |
-| fpm build              | FPM builder installs all `FPM` dependencies|
-| fpm serve              | Starts local dev server at available port  |
-|                        | `localhost:8000`                           |
-=======================================================================
 
 
---- ds.h1: 👀 Want to learn more?
 
-Feel free to check [our documentation](https://fpm.dev/) or jump into our [FifthTry Discord server](https://discord.gg/bucrdvptYd).
+
+-- ftd.column parameter-card:
+optional caption title:
+string cta-title:
+string cta-url:
+parameter list parameters-list:
+width: fill
+
+--- ftd.row:
+padding-vertical: 8
+padding-horizontal: 20
+background-color: $fpm.color.main.text-strong
+width: fill
+id: third-container
+
+--- ftd.row:
+anchor: parent
+width: 106
+height: 3
+bottom: 0
+left: 13
+background-color: $fpm.color.main.cta-primary.base
+
+--- container:  third-container
+
+--- ftd.row:
+width: fill
+spacing: 12
+id: present-container
+align: center
+
+--- ftd.text: Parameters
+style: bold
+role: $fpm.type.copy-tight
+align: center
+
+
+--- container: present-container
+
+--- ftd.text: $title
+if: $title is not null
+role: $fpm.type.copy-tight
+
+--- container: third-container
+
+--- ftd.text: $cta-title
+link: $cta-url
+border-width: 2
+padding-vertical: 4
+padding-horizontal: 23
+white-space: nowrap
+style: semi-bold
+role: $fpm.type.fine-print
+
+--- container: ftd.main
+
+--- ftd.column:
+padding: 20
+width: fill
+
+--- parameters:
+parameters-list: $parameters-list
+
+
+
+-- ftd.column parameters:
+parameter list parameters-list:
+color: $fpm.color.main.background.step-1
+width: fill
+
+--- ftd.row:
+width: fill
+border-bottom: 1
+padding-vertical: 12
+spacing: 35
+border-color: $fpm.color.main.border
+
+--- ftd.text: Name
+role: $fpm.type.fine-print
+style: bold
+
+--- ftd.text: Description
+role: $fpm.type.fine-print
+style: bold
+
+--- container: ftd.main
+
+--- ftd.column:
+width: fill
+padding-top: 12
+spacing: 32
+
+--- parameters-loop:
+title: $obj.title
+description: $obj.description
+required: $obj.required
+datatype: $obj.datatype
+statement: $obj.statement
+$loop$: $parameters-list as $obj
+
+
+
+-- ftd.column parameters-loop:
+caption title:
+string description:
+optional boolean required:
+string datatype:
+string statement:
+color: $fpm.color.main.background.step-1
+
+
+--- ftd.row:
+width: fill
+id: parameter-container
+spacing: 32
+
+--- ftd.column:
+id: first
+
+
+
+--- ftd.row:
+
+--- ftd.text: $title
+role: $fpm.type.copy-relaxed
+style: bold
+
+--- ftd.row:
+if: $required is not null
+color: $fpm.color.main.error.text
+margin-top: -2
+
+--- ftd.text: \\*
+role: $fpm.type.fine-print
+
+--- ftd.text: required
+role: $fpm.type.fine-print
+
+
+--- container: first
+
+--- ftd.text: $datatype
+role: $fpm.type.fine-print
+margin-top: 2
+style: semi-bold
+
+--- ftd.row:
+color: $fpm.color.main.text
+margin-top: 2
+
+--- ftd.text: (
+role: $fpm.type.fine-print
+style: semi-bold
+
+--- ftd.text: $datatype
+role: $fpm.type.fine-print
+style: semi-bold
+
+--- ftd.text: )
+role: $fpm.type.fine-print
+style: semi-bold
+
+--- container: parameter-container
+
+--- ftd.column:
+spacing: 8
+width: fill
+
+--- ftd.text: $description
+role: $fpm.type.fine-print
+
+--- ftd.input: 
+placeholder: $title
+role: $fpm.type.fine-print
+padding-vertical: 8
+padding-horizontal: 16
+border-color: $fpm.color.main.border
+border-radius: 6
+
+
+
+
+
+-- ftd.column response-card:
+optional caption title:
+response list responses-list:
+width: fill
+
+--- ftd.row:
+padding-vertical: 12
+padding-horizontal: 20
+background-color: $fpm.color.main.text-strong
+width: fill
+id: third-container
+
+
+
+--- ftd.row:
+width: fill
+spacing: 12
+id: ll
+align: center
+
+--- ftd.text: response
+style: bold
+role: $fpm.type.copy-tight
+align: center
+
+
+
+--- container: ll 
+--- ftd.text: $title
+if: $title is not null
+role: $fpm.type.copy-tight
+
+--- container: ftd.main
+--- ftd.column:
+id: yes-contaonet
+padding: 20
+width: fill
+
+--- ftd.row:
+id: kk
+width: fill
+padding-vertical: 12
+border-bottom: 1
+border-color: $fpm.color.main.border
+
+--- ftd.row:
+width: fill
+spacing: 64
+
+--- ftd.text: Code
+role: $fpm.type.copy-tight
+
+--- ftd.text: Description
+role: $fpm.type.copy-tight
+
+--- container: kk
+
+--- ftd.text: Links
+role: $fpm.type.copy-tight
+
+--- container: yes-contaonet
+
+--- ftd.column:
+width: fill
+spacing: 32
+padding-top: 12
+
+--- response-list:
+title: $obj.title
+description: $obj.description
+link: $obj.link
+body: $obj.body
+lang: $obj.lang
+$loop$: $responses-list as $obj
+
+
+
+
+
+-- ftd.row response-list:
+caption title:
+string description:
+string link:
+string lang:
+body body:
+width: fill
+
+--- ftd.row:
+width: fill
+spacing: 64
+
+--- ftd.text: $title
+role: $fpm.type.copy-tight
+
+--- ftd.text: $description
+role: $fpm.type.fine-print
+
+--- container: ftd.main
+
+--- ftd.text: $link
+role: $fpm.type.copy-tight
+min-width: 48
+
+-- ftd.column code-block:
+body body:
+string lang:
+width: fill
+border-top: 1
+border-color: $fpm.color.main.text
+margin-top: 20
+boolean open: false
+
+--- ftd.text: media type
+
+
+
+--- ftd.text: media type
+--- ftd.text: controls accept header
+
+--- ftd.row:
+
+--- ftd.text: media type
+
+--- ftd.text: media type
+border-left: 1
+
+--- container: ftd.main
+
+--- ftd.code:
+text: $body
+lang: $lang
+width: fill
+role: $fpm.type.copy-relaxed
+color: $fpm.color.main.text
+padding-top: 10
+padding-left: 20
+padding-bottom: 10
+padding-right: 20
+
+
+
+
+
+
+
+
+
+
+
+-- cb.code code:
+optional caption caption:
+body body:
+string lang:
+caption: $caption
+lang: $lang
+
+$body
+
+
+
+
+
+-- ftd.column media:
+
+
+
+
+
+
+
+
+
+
+-- ftd.column api-page:
+width: fill
+optional caption title:
+optional body body:
+background-color: $fpm.color.main.background.base
+open: true
+toc-item list toc-item-list:$toc-item-list
+append-at: api-container
+boolean login-button: $login-button
+boolean pricing-cta: $pricing-cta
+optional string login-btn-txt: Login
+optional string sign-in-txt:
+fpm.toc-item list sections: $sections
+fpm.toc-item list sub-sections: $sub-sections
+fpm.toc-item list extra: $extra
+optional fpm.toc-item current-section:
+optional fpm.toc-item current-page:
+optional fpm.toc-item current-subsection:
+
+--- ftd.column:
+width: fill
+id: wrapper
+
+--- h.header:
+login-button: $login-button
+pricing-cta: $pricing-cta
+login-btn-txt: $login-btn-txt
+sign-in-txt: $sign-in-txt 
+sections: $sections
+sub-sections: $sub-sections
+current-section: $current-section
+current-subsection: $current-subsection
+current-page: $current-page
+extra: $extra
+site-logo: $site-logo
+site-url: $site-url
+site-name: $site-name
+logo-height: 38
+menu-right: 0
+menu-left: -88
+current-url: /home/
+menu-icon: $assets.files.static.header.hamburger.svg
+
+--- container: wrapper
+
+--- ftd.row:
+width: fill
+id: main-container
+
+
+--- ftd.column:
+width: 398
+background-color: $fpm.color.main.background.step-1
+min-height: calc 100vh
+height: fill
+padding-vertical: 32
+spacing: 5
+
+--- toc-list:
+title: $obj.title
+url: $obj.url
+method: $obj.method
+$loop$: $toc-item-list as $obj
+
+--- container: main-container
+
+
+--- ftd.column:
+width: fill
+id: api-container
+padding-vertical: 48
+padding-left: 64
+spacing: 20
+
+
+--- ftd.text: $title
+role: $fpm.type.heading-hero
+color: $fpm.color.main.text-strong
+
+--- ftd.text: $body
+role: $fpm.type.copy-relaxed
+color: $fpm.color.main.text
+
+
+
+--- ftd.column:
+
+
+-- ftd.row toc-list:
+caption title:
+optional string method:
+optional string url:
+boolean is-active: false
+color: $fpm.color.main.text
+width: fill
+
+
+--- ftd.row:
+if: $url is not null
+width: fill
+link: $url
+background-color if $MOUSE-IN: $fpm.color.main.background.code
+
+
+--- ftd.row:
+padding-vertical: 8
+padding-horizontal: 16
+width: fill
+
+--- ftd.text: $title
+role: $fpm.type.fine-print
+width: fill
+color: $fpm.color.main.text
+
+
+--- ftd.text: $method
+if: $method is not null
+role: $fpm.type.fine-print
+color if $method == POST: $fpm.color.main.success.base
+color if $method == PUT: $fpm.color.main.warning.text
+color if $method == GET: $fpm.color.main.info.text
+color if $method == DELETE: $fpm.color.main.error.text
+
+--- container: ftd.main
+
+
+--- ftd.row:
+if: $url is null
+width: fill
+padding-vertical: 8
+padding-horizontal: 16
+
+--- ftd.text: $title
+role: $fpm.type.fine-print
+width: fill
+color: $fpm.color.main.text
+
+
+
+
 

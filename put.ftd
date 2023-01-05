@@ -1,0 +1,21 @@
+-- import: fifthtry.github.io/api-ds as ds
+
+
+-- ds.api-page: Put API
+
+-- ds.api: /store/<api-name>
+type: PUT
+purpose: Find purchase order by ID
+bgcolor: $fpm.color.main.warning.base
+typecolor: $fpm.color.main.warning.text
+textColor: $fpm.color.main.warning.text
+
+For valid response try integer IDs with value <= 5 or > 10. Other values will generate exceptions.
+
+-- ds.parameter-card:
+cta-title: Try it out
+cta-url: put/
+parameters-list: $ds.parameters-list
+
+-- ds.response-card:
+responses-list: $ds.responses-list

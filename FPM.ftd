@@ -3,6 +3,25 @@
 -- fpm.package: fifthtry.github.io/api-ds
 download-base-url: https://raw.githubusercontent.com/fifthtry/api-ds/main
 
--- fpm.dependency: fifthtry.github.io/doc-site as ds
+-- fpm.dependency: fifthtry.github.io/header
+-- fpm.dependency: fifthtry.github.io/code-block
 
--- fpm.auto-import: ds
+
+
+
+
+-- fpm.auto-import: fpm
+-- fpm.auto-import: fifthtry.github.io/header as h
+-- fpm.auto-import: fifthtry.github.io/code-block as cb
+
+
+
+
+-- fpm.sitemap:
+
+# API Docs: /api/post/
+
+- POST: /api/post/
+- PUT: /api/put/
+- GET: /api/get/
+- DELETE: /api/delete/
